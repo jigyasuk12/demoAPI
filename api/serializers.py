@@ -1,0 +1,10 @@
+from dataclasses import field, fields
+import imp
+from pyexpat import model
+from rest_framework import serializers
+from .models import Student
+
+class StudentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model= Student
+        fields= ['id','email','password']
